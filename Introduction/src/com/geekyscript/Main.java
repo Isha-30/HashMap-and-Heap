@@ -23,5 +23,12 @@ public class Main {
         System.out.println(map.containsKey("India"));
         System.out.println(map.containsKey("Utopia"));
 
+        Set<String> keys = map.keySet();
+        System.out.println(keys);
+
+        for(String key: map.keySet()){
+            Integer val = map.get(key);
+            System.out.println(key + " " + val);
+        }
     }
 }
