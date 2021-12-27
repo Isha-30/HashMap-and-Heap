@@ -1,4 +1,5 @@
 package com.geekyscript;
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
@@ -18,5 +19,9 @@ public class Main {
 
         System.out.println(map.get("India"));
         System.out.println(map.get("Utopia"));
+
+        System.out.println(map.containsKey("India"));
+        System.out.println(map.containsKey("Utopia"));
+
     }
 }
