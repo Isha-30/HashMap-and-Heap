@@ -11,5 +11,9 @@ public class Main {
         map.put("UK", 20);
 
         System.out.println(map);
+
+        map.put("US", 30);
+        map.put("Nigeria", 10);
+        System.out.println(map);
     }
 }
