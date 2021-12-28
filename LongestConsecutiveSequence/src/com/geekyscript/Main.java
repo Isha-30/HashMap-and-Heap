@@ -19,16 +19,17 @@ public class Main {
             map.put(val, true);
 
         for(int val : arr){
-            if(map.containsKey(val-1))
+            if(map.containsKey(val-1)) {
                 map.put(val, false);
+            }
         }
 
-        int msp = 0;
-        int ml = 0;
+        int msp = 0; // max starting point
+        int ml = 0; //max length
         for(int val : arr){
             if(map.get(val)==true){
-                int tl = 1;
-                int tsp = val;
+                int tl = 1; // temporary length
+                int tsp = val; // temporary start point
 
                 while(map.containsKey(tsp+tl)){
                     tl++;
@@ -42,7 +43,7 @@ public class Main {
         }
 
         for(int i = 0; i<ml; i++){
-            System.out.println(msp+1);
+            System.out.println(msp+i);
         }
     }
 }
