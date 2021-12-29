@@ -15,14 +15,21 @@ public class Main {
         for(int i = 0; i< n; i++){
             arr[i] = sc.nextInt();
         }
-        for(int val: arr){
-            pq.add(val);
-        }
-        System.out.println("Enter val of K: ");
+        System.out.println("Enter the value of K: ");
         int k = sc.nextInt();
-        while(pq.size()>(n-k)){
-            System.out.println(pq.peek());
-            pq.remove();
+        for(int i =0; i< n; i++){
+            if(i<k){
+                pq.add(arr[i]);
+            }
+            else{
+                if(arr[i] > pq.peek()){
+                    pq.remove();
+                    pq.add(arr[i]);
+                }
+            }
         }
+
+        while(pq.size() > 0)
+            System.out.println(pq.remove());
     }
 }
