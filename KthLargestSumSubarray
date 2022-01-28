@@ -1,7 +1,7 @@
 public class Solution {
 
-	public static int getKthLargest(ArrayList<Integer> arr, int k) {
-		int[] sum = new int[arr.size()+1];
+   public static int getKthLargest(ArrayList<Integer> arr, int k) {
+	int[] sum = new int[arr.size()+1];
         sum[0] = 0;
         sum[1] = arr.get(0);
         int  n = arr.size();
